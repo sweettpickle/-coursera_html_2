@@ -1,0 +1,409 @@
+body{
+    background:#FFF;
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    font-size:14px
+}
+a{
+    text-decoration:none 
+}
+h1{
+    text-transform:uppercase
+}
+header{
+    display:inline-block
+}
+main{
+    max-width:980px;
+    margin:0 auto
+}
+ul.products{
+    clear:both;
+    list-style:none;
+    margin:0;
+    padding:0
+}
+ul.products li{
+    display:inline-block;
+    background:#FFF;
+    border:1px solid transparent;
+    padding:10px;
+    vertical-align: top;
+    position:relative;
+    width:220px;
+    z-index:10
+}
+ul.products li:hover{
+    box-shadow: 0 0 5px 1px rgba(200, 200, 200, .45);
+    z-index:100;
+    margin-bottom:-20px
+}
+ul.products li .image img{
+    transition: opacity .3s linear
+}
+ul.products li .image img:hover{
+    opacity: .5
+}
+ul.products li .name{
+    font-size:16px;
+    font-weight:700;
+    text-transform:uppercase;
+    margin:5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: color .3s linear;
+    text-overflow: ellipsis
+}
+ul.products li .name a{
+    color:#222;
+    transition: color .3s linear
+}
+ul.products li .name:hover,
+ul.products li .name a:hover{
+    color:red
+}
+ul.products li .price{
+    font-weight:700
+}
+ul.products li .price span{
+    margin-right:5px
+}
+ul.products li .price span{
+    color:red;
+}
+ul.products li .price span.old-price{
+    color:#CCC;
+    text-decoration: line-through;
+}
+
+ul.products li .description{
+    color:#464646;
+}
+ul.products li .about{
+    visibility:hidden;
+    opacity:0;
+    margin-top:0;
+    text-align:center;
+    transform: translateY(20px);
+}
+ul.products li:hover .about{
+    visibility:visible;
+    opacity:1;
+    margin-bottom:20px;
+    transform: translateY(0);
+}
+ul.products li .about a{
+    color: #fff;
+    background: #388abe;
+    position:relative;
+    bottom:-10px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-decoration:none;
+    transition: background .3s ease-in .1s;
+    font-weight:700
+}
+ul.products li .about a:hover{
+    background: #44c2a8;
+}
+
+ul.products li .about, ul.products li{
+    transition: box-shadow .3s ease-in .3s,
+                margin .3s ease-in .2s, 
+                transform .3s ease-in-out .15s,
+                opacity .3s ease-in .15s
+}
+
+/* Ratings*/
+.rate {
+    display: inline-block;
+    border: 0;
+    padding:0;
+    margin:0
+}
+.rate > input {
+    display: none;
+}
+.rate > label {
+    float: right;
+    color: #ccc;
+}
+
+.rate > label:before {
+    display: inline-block;
+    font-size: 1rem;
+    padding: .1rem;
+    margin: 0;
+    cursor: pointer;
+    font-family: FontAwesome;
+    content: "\f005";
+}
+
+.rate .half:before {
+    content: "\f089";
+    position: absolute;
+    padding-right: 0;
+}
+
+input:checked ~ label,
+label:hover,
+label:hover ~ label{color: #ffe500;}
+
+input:checked ~ label:hover,
+input:checked ~ label:hover ~ label,
+label:hover ~ input:checked ~ label{color: #d4c014} 
+
+
+/* Layouts */
+.view-radio {
+  display: none
+}
+.view-radio + label {
+  transition: all 0.2s ease-in-out;
+  color: #969696 !important;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 2rem 0 0;
+  padding:25px 0;
+  float:right
+}
+
+
+.view-radio:checked,
+#list-view:checked + label,
+#grid-view:checked + label,
+#list-view + label:hover,
+#grid-view + label:hover
+{
+  color: red !important;
+}
+.list-view-radio:checked ~ ul.products li {
+    width: auto;
+    margin-right: 0;
+    text-align: left
+}
+.list-view-radio ~ ul.products li > div {
+    transition: margin .5s ease-in-out;
+}
+.list-view-radio:checked ~ ul.products li > .image{
+    z-index:200
+}
+.list-view-radio:checked ~ ul.products li > div {
+    display:inline-block;
+    margin-right:15px;
+    position:relative;
+    z-index:100;
+    vertical-align:top
+}
+.list-view-radio:checked ~ ul.products li > div:last-child{
+    width:39%;
+    float:right;
+}
+.list-view-radio:checked ~ ul.products li:hover{
+    margin-bottom:0
+}
+    background:#FFF;
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    font-size:14px
+}
+a{
+    text-decoration:none 
+}
+h1{
+    text-transform:uppercase
+}
+header{
+    display:inline-block
+}
+main{
+    max-width:980px;
+    margin:0 auto
+}
+ul.products{
+    clear:both;
+    list-style:none;
+    margin:0;
+    padding:0
+}
+ul.products li{
+    display:inline-block;
+    background:#FFF;
+    border:1px solid transparent;
+    padding:10px;
+    vertical-align: top;
+    position:relative;
+    width:220px;
+    z-index:10
+}
+ul.products li:hover{
+    box-shadow: 0 0 5px 1px rgba(200, 200, 200, .45);
+    z-index:100;
+    margin-bottom:-20px
+}
+ul.products li .image img{
+    transition: opacity .3s linear
+}
+ul.products li .image img:hover{
+    opacity: .5
+}
+ul.products li .name{
+    font-size:16px;
+    font-weight:700;
+    text-transform:uppercase;
+    margin:5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: color .3s linear;
+    text-overflow: ellipsis
+}
+ul.products li .name a{
+    color:#222;
+    transition: color .3s linear
+}
+ul.products li .name:hover,
+ul.products li .name a:hover{
+    color:red
+}
+ul.products li .price{
+    font-weight:700
+}
+ul.products li .price span{
+    margin-right:5px
+}
+ul.products li .price span{
+    color:red;
+}
+ul.products li .price span.old-price{
+    color:#CCC;
+    text-decoration: line-through;
+}
+
+ul.products li .description{
+    color:#464646;
+}
+ul.products li .about{
+    visibility:hidden;
+    opacity:0;
+    margin-top:0;
+    text-align:center;
+    transform: translateY(20px);
+}
+ul.products li:hover .about{
+    visibility:visible;
+    opacity:1;
+    margin-bottom:20px;
+    transform: translateY(0);
+}
+ul.products li .about a{
+    color: #fff;
+    background: #388abe;
+    position:relative;
+    bottom:-10px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-decoration:none;
+    transition: background .3s ease-in .1s;
+    font-weight:700
+}
+ul.products li .about a:hover{
+    background: #44c2a8;
+}
+
+ul.products li .about, ul.products li{
+    transition: box-shadow .3s ease-in .3s,
+                margin .3s ease-in .2s, 
+                transform .3s ease-in-out .15s,
+                opacity .3s ease-in .15s
+}
+
+/* Ratings*/
+.rate {
+    display: inline-block;
+    border: 0;
+    padding:0;
+    margin:0
+}
+.rate > input {
+    display: none;
+}
+.rate > label {
+    float: right;
+    color: #ccc;
+}
+
+.rate > label:before {
+    display: inline-block;
+    font-size: 1rem;
+    padding: .1rem;
+    margin: 0;
+    cursor: pointer;
+    font-family: FontAwesome;
+    content: "\f005";
+}
+
+.rate .half:before {
+    content: "\f089";
+    position: absolute;
+    padding-right: 0;
+}
+
+input:checked ~ label,
+label:hover,
+label:hover ~ label{color: #ffe500;}
+
+input:checked ~ label:hover,
+input:checked ~ label:hover ~ label,
+label:hover ~ input:checked ~ label{color: #d4c014} 
+
+
+/* Layouts */
+.view-radio {
+  display: none
+}
+.view-radio + label {
+  transition: all 0.2s ease-in-out;
+  color: #969696 !important;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 2rem 0 0;
+  padding:25px 0;
+  float:right
+}
+
+
+.view-radio:checked,
+#list-view:checked + label,
+#grid-view:checked + label,
+#list-view + label:hover,
+#grid-view + label:hover
+{
+  color: red !important;
+}
+.list-view-radio:checked ~ ul.products li {
+    width: auto;
+    margin-right: 0;
+    text-align: left
+}
+.list-view-radio ~ ul.products li > div {
+    transition: margin .5s ease-in-out;
+}
+.list-view-radio:checked ~ ul.products li > .image{
+    z-index:200
+}
+.list-view-radio:checked ~ ul.products li > div {
+    display:inline-block;
+    margin-right:15px;
+    position:relative;
+    z-index:100;
+    vertical-align:top
+}
+.list-view-radio:checked ~ ul.products li > div:last-child{
+    width:39%;
+    float:right;
+}
+.list-view-radio:checked ~ ul.products li:hover{
+    margin-bottom:0
+}

@@ -3,15 +3,141 @@ body {
     padding: 0;
 }
 
-section {
+.card {
+    width: 300px;
+    height: 600px;
+
+    font-size: 25px;
+    margin: 10px 10px;
+    padding: 5px 5px;
+
+    background-color: antiquewhite;
+
+    overflow: hidden;
+    display: inline-block;
+
     box-sizing: content-box;
+}
 
-    margin: 0 0;
-    width: 25%;
+.card:hover {
+    transition-duration: 0.5s;
+    box-shadow: 0 0 10px peachpuff;
+}
 
-    display: block;
+.img_box {
+    text-align: center;
+    height: 300px;
+    width: 300px;
+
+    float: left;
+    position: relative;
 }
 
 img {
-    width: 80%;
+    max-width: 100%;
+    max-height: 100%;
+    transition: opacity 0.3s;
+
+    position: absolute;
+    margin: auto;
+    margin-bottom: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+img:hover {
+    opacity: 0.7;
+}
+
+
+.description {
+    font-size: 70%;
+    text-align: justify;
+    font-family: 'Times', serif;
+}
+
+
+#list {
+    display: none;
+}
+
+#list + label {
+    margin: 30px 30px;
+    color: red;
+    cursor: pointer;
+    float: right;
+}
+
+
+input[id="list"]:checked ~ .card {
+    transition-duration: 0.1s;
+    /*width: auto;*/
+    width: 90%;
+    height: 300px;
+    display: block;
+}
+
+input[id="list"]:checked ~ .card .info{
+    display: inline-block;
+    height: 100%;
+    width: 200px;
+    float: left;
+    overflow: hidden;
+    margin: 30px 20px;
+}
+input[id="list"]:checked ~ .card .description {
+    margin-top: 20px;
+}
+
+.name {
+    overflow: hidden;
+    transition: color 0.3s;
+}
+
+.name:hover {
+    color: red;
+}
+
+.category {
+    font-size: 60%;
+}
+
+.coast {
+    color: red;
+}
+
+strike {
+    font-size: 77%;
+    color: black;
+}
+
+
+.rating-area {
+    width: 100px;
+    height: 25px;
+}
+
+.rating-area input {
+    display: none;
+}
+
+.rating-area label {
+    float: right;
+
+    width: 20px;
+    font-size: 25px;
+
+    cursor: pointer;
+    color: lightgrey;
+}
+
+.rating-area label:before {
+    content: '★';
+}
+
+input:hover ~ label,
+input:checked ~ label {
+    color: gold;
 }
