@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Бабуленькик урожай</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header><h1>Галерея осеннего урожая</h1></header>
+
+    <section class="all">
+
+            <input id="switch1" type="radio" name="slider" checked>
+            <input id="switch2" type="radio" name="slider">
+            <input id="switch3" type="radio" name="slider">
+
+        <div class="switch">
+            <label for="switch1"></label>
+            <label for="switch2"></label>
+            <label for="switch3"></label>
+        </div>
+
+        <div class="slider">
+
+            <div class="slides">
+
+                <article class="card">
+                    <div class="img_card"><a href="#openModal1"><img class="photo" src="1.jpeg" alt="Баклажан"></a></div>
+                    <div class="description">Баклажа́н, или Паслён тёмнопло́дный (лат. Solánum melongéna) — вид многолетних
+                        травянистых растений рода Паслён (Solanum). Возделывается как однолетнее растение. Съедобен только плод.
+                        В ботаническом смысле это ягода, в кулинарном рассматривается как овощ. Известен[кому?] также под
+                        названием бадриджа́н (редко бубриджа́н).</div>
+                </article>
+
+                <article class="card">
+                    <div class="img_card"><a href="#openModal2"><img class="photo" src="2.jpg" alt="Тыква"></a></div>
+                    <div class="description">Ты́ква (лат. Cucurbita) — род травянистых растений семейства Тыквенные (Cucurbitaceae).
+
+                        Под словом «тыква» в России обычно понимаются виды Тыква обыкновенная (Cucurbita pepo) и Тыква гигантская (Cucurbita maxima), широко распространённые и культивируемые как пищевое и кормовое растение.
+
+                        Русское слово «тыква», по версии словаря Успенского, возможно происходит от праславянского *tyky из *tykati — «жиреть, толстеть»[3]. Однако, даётся и вторая версия: от греческого «sikuos» — «огурец».</div>
+                </article>
+
+                <article class="card">
+                    <div class="img_card"><a href="#openModal3"><img class="photo" src="3.jpg" alt="Помидоры"></a></div>
+                    <div class="description">Тома́т или помидóр (лат. Solánum lycopérsicum) — однолетнее или многолетнее травянистое растение, вид рода Паслён (Solanum)[2] семейства Паслёновые (Solanaceae). Возделывается как овощная культура; выращивается ради съедобных плодов — сочных многогнёздных ягод различной формы и окраски.</div>
+                </article>
+
+                <article class="card">
+                    <div class="img_card"><a href="#openModal4"><img class="photo" src="4.jpg" alt="Морковь"></a></div>
+                    <div class="description">Морковь посевная (лат. Daucus carota subsp. sativus) — двулетнее растение, овощная культура, подвид вида морковь дикая. Обычно в быту под словом «морковь» подразумевается широко распространенный корнеплод именно этого растения, который обычно относят к овощам.</div>
+                </article>
+
+
+
+                <article class="card">
+                    <div class="img_card"><a href="#openModal5"><img class="photo" src="5.webp" alt="Огурцы"></a></div>
+
+                    <div class="description">Огуре́ц обыкнове́нный, или Огурец посевно́й (лат. Cucumis sativus), — однолетнее травянистое растение, вид рода Огурец (Cucumis) семейства Тыквенные (Cucurbitaceae), овощная культура.</div>
+                </article>
+
+                <article class="card">
+                    <div class="img_card"><a href="#openModal6"><img class="photo" src="6.jpeg" alt="Капуста"></a></div>
+                    <div class="description">Капу́ста огоро́дная[2]:460 (лат. Brássica olerácea) — двулетнее растение, сельскохозяйственная культура; вид рода Капуста (лат. Brassica) семейства Капустные (Крестоцветные).</div>
+                </article>
+
+                <article class="card">
+                    <div class="img_card"><a href="#openModal7"><img class="photo" src="7.jpg" alt="Клубника"></a></div>
+                    <div class="description">Клубни́ка (от др.-рус. клуб «клубок, шарообразное тело») — название растений и их плодов (ягод, многоорешков) некоторых видов рода Земляника (Fragaria), а также распространённое разговорное название крупноплодных сортов этого рода[1].</div>
+                </article>
+
+                <article class="card">
+                    <div class="img_card"><a href="#openModal8"><img class="photo" src="8.webp" alt="Картошка"></a></div>
+                    <div class="description">Карто́фель, или Паслён клубнено́сный (лат. Solánum tuberósum), — вид многолетних клубненосных травянистых растений из рода Паслён (Solanum) семейства Паслёновые (Solanaceae). Клубни картофеля являются важным пищевым продуктом. Плоды ядовиты в связи с содержанием в них соланина.</div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+<!--    <div class="modalDialog">-->
+<!--        <div class="openModal">-->
+<!--            <img id="openModal1" src="1.jpeg" alt="Баклажан">-->
+<!--            <img id="openModal2" src="2.jpg" alt="Тыква">-->
+<!--            <img id="openModal3" src="3.jpg" alt="Помидоры">-->
+<!--            <img src="4.jpg" alt="Морковь">-->
+<!--            <img src="5.webp" alt="Огурцы">-->
+<!--            <img src="6.jpeg" alt="Капуста">-->
+<!--            <img src="7.jpg" alt="Клубника">-->
+<!--            <img src="8.webp" alt="Картошка">-->
+<!--        </div>-->
+<!--        <a href="#close" title="Закрыть" class="close">×</a>-->
+<!--    </div>-->
+
+    <div id="openModal1" class="modalDialog"><a href="#close" title="Закрыть" class="close">×</a>
+        <img class="photo" src="1.jpeg" alt="Баклажан"></div>
+
+    <div id="openModal2" class="modalDialog"><a href="#close" title="Закрыть" class="close">×</a>
+        <img class="photo" src="2.jpg" alt="Тыква"></div>
+
+    <div id="openModal3" class="modalDialog"><a href="#close" title="Закрыть" class="close">×</a>
+        <img class="photo" src="3.jpg" alt="Помидоры"></div>
+
+    <div id="openModal4" class="modalDialog"><a href="#close" title="Закрыть" class="close">×</a>
+        <img class="photo" src="4.jpg" alt="Морковь"></div>
+
+    <div id="openModal5" class="modalDialog"><a href="#close" title="Закрыть" class="close">×</a>
+        <img class="photo" src="5.webp" alt="Огурцы"></div>
+
+    <div id="openModal6" class="modalDialog"><a href="#close" title="Закрыть" class="close">×</a>
+        <img class="photo" src="6.jpeg" alt="Капуста"></div>
+
+    <div id="openModal7" class="modalDialog"><a href="#close" title="Закрыть" class="close">×</a>
+        <img class="photo" src="7.jpg" alt="Клубника"></div>
+
+    <div id="openModal8" class="modalDialog"><a href="#close" title="Закрыть" class="close">×</a>
+        <img class="photo" src="8.webp" alt="Картошка"></div>
+
+</body>
+</html>

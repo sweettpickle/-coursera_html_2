@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.all {
+    position: relative;
+    text-align: center;
+    width: 78%;
+
+    margin: 0 auto;
+}
+
+.slider {
+    padding: 3vw 1vw;
+
+    overflow: hidden;
+}
+
+.slides {
+    transition: all 0.5s;
+    width: 300%;
+}
+
+.card {
+    width: 15vw;
+    margin: 0 1vw;
+    padding: 1vw 1vw;
+
+    float: left;
+}
+
+.img_card {
+    width: 15vw;
+    height: 15vw;
+
+    position: relative;
+}
+
+.img_card img {
+    max-height: 100%;
+    max-width: 100%;
+
+    position: absolute;
+    margin: auto auto 0 auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.card .description {
+    height: 0;
+    overflow: hidden;
+
+    padding-top: 1vw;
+    font-size: 1.8vh;
+    text-align: justify;
+}
+
+
+.card:hover .description {
+    height: auto;
+}
+
+.card:hover {
+    transition-duration: 0.3s;
+
+    background: #fff;
+    box-shadow: 0 0 1vw #7d7d7d;
+    transform: scale(1.02);
+
+    cursor: pointer;
+}
+
+#switch1:checked ~ .slider .slides {
+    transform: translate(0);
+}
+
+#switch2:checked ~ .slider .slides {
+    transform: translate(-57vw);
+}
+
+#switch3:checked ~ .slider .slides {
+    transform: translate(-114vw);
+}
+
+
+input[name="slider"] {
+    display: none;
+}
+
+.switch {
+    top: 35vw;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+label::before {
+    content: '';
+    display: inline-block;
+
+    width: 1.3vw;
+    height: 1.3vw;
+
+
+    border: .2vw solid #adb5bd;
+    border-radius: 50%;
+    margin: 0 .5vw;
+
+    transition-duration: 0.3s;
+}
+
+.switch label:hover:before {
+    border-color: #b3d7ff;
+    box-shadow: 0 0 .3vw #b3d7ff;
+}
+
+#switch1:checked ~ .switch label[for="switch1"]:before {
+    border-color: #b3d7ff;
+    background-color: #b3d7ff;
+    box-shadow: 0 0 .3vw #b3d7ff;
+}
+
+#switch2:checked ~ .switch label[for="switch2"]:before {
+    border-color: #b3d7ff;
+    background-color: #b3d7ff;
+    box-shadow: 0 0 .3vw #b3d7ff;
+}
+
+#switch3:checked ~ .switch label[for="switch3"]:before {
+    border-color: #b3d7ff;
+    background-color: #b3d7ff;
+    box-shadow: 0 0 .3vw #b3d7ff;
+}
+
+.modalDialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: rgba(0,0,0,0.8);
+    z-index: 999;
+
+    /*transition: opacity 400ms ease-in;*/
+    display: none;
+    pointer-events: none;
+}
+
+.modalDialog img {
+    max-height: 80vw;
+    max-width: 80vh;
+
+    /*display: none;*/
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modalDialog:target {
+    display: block;
+    pointer-events: auto;
+}
+
+
+.close {
+    position: absolute;
+    top: 3vh;
+    right: 3vw;
+    color: #f1f1f1;
+    font-size: 5vw;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+    color: #bbb;
+    cursor: pointer;
+}

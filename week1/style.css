@@ -3,6 +3,12 @@ body {
     padding: 0;
 }
 
+header {
+    text-align: center;
+    font-size: 50px;
+    font-family: Kalapi;
+}
+
 .card {
     width: 300px;
     height: 600px;
@@ -10,6 +16,7 @@ body {
     font-size: 25px;
     margin: 10px 10px;
     padding: 5px 5px;
+    border-radius: 10px;
 
     background-color: antiquewhite;
 
@@ -67,7 +74,7 @@ img:hover {
     margin: 30px 30px;
     color: red;
     cursor: pointer;
-    float: right;
+    display: block;
 }
 
 
