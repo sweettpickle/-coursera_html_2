@@ -18,7 +18,7 @@ header {
     padding: 5px 5px;
     border-radius: 10px;
 
-    background-color: antiquewhite;
+    /*background-color: antiquewhite;*/
 
     overflow: hidden;
     display: inline-block;
@@ -82,6 +82,7 @@ input[id="list"]:checked ~ .card {
     transition-duration: 0.1s;
     /*width: auto;*/
     width: 90%;
+    margin: 20px auto;
     height: 300px;
     display: block;
 }
