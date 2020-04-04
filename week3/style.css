@@ -1,0 +1,229 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    color: #85471B;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-color: antiquewhite;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.gallery {
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.photo_cat {
+    box-shadow: 0 0 10px #E6A97F;
+    height: 30vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+}
+
+.photo_cat:nth-child(6n) {
+    grid-column: 1/3;
+}
+
+.photo_cat:nth-child(8n+2) {
+    grid-column: 2/4;
+}
+
+.photo_cat:nth-child(8n) {
+    grid-column: 1/4;
+}
+
+nav, aside {
+    padding: 10px;
+    margin: 10px 20px;
+
+    border-radius: 10px;
+    background-color: bisque;
+    box-shadow: 0 0 10px #E6A97F;
+}
+
+aside {
+    align-self: start;
+}
+
+.all_rating, nav {
+    display: flex;
+    flex-direction: column;
+}
+
+aside > h1 {
+    text-align: center;
+    color: red;
+    font-size: x-large;
+}
+
+.rating {
+    display: grid;
+    grid-template-rows: 30px 30px;
+    align-items: center;
+}
+
+.rating > header {
+    font-weight: bold;
+    text-align: left;
+    color: black;
+}
+
+.rating_breed {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    align-items: center;
+}
+
+.rating_breed > div {
+    height: 2.5vh;
+    border: .5px solid #85471B;
+}
+
+.rating:nth-child(1) .rating_breed > div {
+    background: linear-gradient(to right, green, white);
+    width: 80%;
+}
+
+.rating:nth-child(2) .rating_breed > div {
+    background: linear-gradient(to right, red, white);
+    width: 30%;
+}
+
+.rating:nth-child(3) .rating_breed > div {
+    background: linear-gradient(to right, green, white);
+    width: 100%;
+}
+
+.rating:nth-child(4) .rating_breed > div {
+    background: linear-gradient(to right, yellow, white);
+    width: 60%;
+}
+
+.rating_breed > span {
+    text-align: center;
+    font-weight: bold;
+}
+
+footer {
+    flex: 0 0 auto;
+    height: 5vh;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+
+    background-color: #E6B99A;
+    padding: 10px 20px;
+    border-top: 1px solid #85471B;
+}
+
+footer a {
+    grid-column: 3/4;
+    text-align: right;
+    text-decoration: none;
+}
+
+input[name="breed"] {
+    display: none;
+}
+
+.breed {
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #E6A97F;
+
+    padding: 15px 5px;
+    margin: 5px 0;
+    text-align: center;
+}
+
+nav label:hover,
+#breed:checked ~ main label[for="breed"],
+#breed1:checked ~ main label[for="breed1"],
+#breed2:checked ~ main label[for="breed2"],
+#breed3:checked ~ main label[for="breed3"],
+#breed4:checked ~ main label[for="breed4"]{
+    transition: all 0.3s linear;
+    background-color: #E6A97F;
+    cursor: pointer;
+}
+
+.description {
+    opacity: 0;
+
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    font-size: 1.5vw;
+    align-self: flex-end;
+}
+
+.photo_cat:hover,
+.photo_cat:hover .description,
+#breed1:checked ~ main .breed1,
+#breed2:checked ~ main .breed2,
+#breed3:checked ~ main .breed3,
+#breed4:checked ~ main .breed4 {
+    transition: all 0.3s linear;
+}
+
+.photo_cat:hover {
+    box-shadow: 0 0 10px #85471B;
+}
+
+.photo_cat:hover .description {
+    opacity: 1;
+}
+
+#breed1:checked ~ main .photo_cat:not(.breed1),
+#breed2:checked ~ main .photo_cat:not(.breed2),
+#breed3:checked ~ main .photo_cat:not(.breed3),
+#breed4:checked ~ main .photo_cat:not(.breed4){
+    opacity: .5;
+}
+
+#rate:hover {
+    cursor: pointer;
+}
+
+#rate:checked ~ .all_rating article:nth-child(1){
+    order: 2;
+}
+
+#rate:checked ~ .all_rating article:nth-child(3){
+    order: 3;
+}
+
+#rate:checked ~ .all_rating article:nth-child(4){
+    order: 1;
+}
+
+
