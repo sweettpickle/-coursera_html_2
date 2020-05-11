@@ -6,6 +6,7 @@ body {
 header {
     font-size: 1.5vw;
     text-align: center;
+    color: #245A7A;
 }
 
 .all {
@@ -45,6 +46,7 @@ header {
 .img_card img {
     max-height: 100%;
     max-width: 100%;
+    border-radius: 30px;
 
     position: absolute;
     margin: auto auto 0 auto;
@@ -73,6 +75,7 @@ header {
 
     background: #fff;
     box-shadow: 0 0 1vw #7d7d7d;
+    /*box-shadow: 0 0 1vw #245A7A;*/
     transform: scale(1.02);
 
     cursor: pointer;
@@ -111,7 +114,8 @@ label::before {
     height: 1.3vw;
 
 
-    border: .2vw solid #adb5bd;
+    /*border: .2vw solid #0e95b1;*/
+    border: .15vw solid grey;
     border-radius: 50%;
     margin: 0 .5vw;
 
@@ -119,26 +123,16 @@ label::before {
 }
 
 .switch label:hover:before {
-    border-color: #b3d7ff;
-    box-shadow: 0 0 .3vw #b3d7ff;
+    /*box-shadow: 0 0 .3vw #0e95b1;*/
+    box-shadow: 0 0 .3vw #245A7A;
 }
 
-#switch1:checked ~ .switch label[for="switch1"]:before {
-    border-color: #b3d7ff;
-    background-color: #b3d7ff;
-    box-shadow: 0 0 .3vw #b3d7ff;
-}
-
-#switch2:checked ~ .switch label[for="switch2"]:before {
-    border-color: #b3d7ff;
-    background-color: #b3d7ff;
-    box-shadow: 0 0 .3vw #b3d7ff;
-}
-
+#switch1:checked ~ .switch label[for="switch1"]:before,
+#switch2:checked ~ .switch label[for="switch2"]:before,
 #switch3:checked ~ .switch label[for="switch3"]:before {
-    border-color: #b3d7ff;
-    background-color: #b3d7ff;
-    box-shadow: 0 0 .3vw #b3d7ff;
+    border-color: #245A7A;
+    background-color: #245A7A;
+    box-shadow: 0 0 .3vw #245A7A;
 }
 
 .modalDialog {
