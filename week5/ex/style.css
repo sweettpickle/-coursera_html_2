@@ -6,13 +6,13 @@
 html {
     box-sizing: border-box;
     background: white;
-    padding: 18px;
 }
 
 body {
     width: 1000px;
     height: 1500px;
     background: #eeeeee;
+    border: 18px solid white;
     margin: 0 auto;
 
     text-align: center;
@@ -25,7 +25,6 @@ body {
 
 body > header {
     grid-row: 1;
-    /*border: 1px solid black;*/
 }
 
 #logo {
@@ -36,7 +35,6 @@ body > header {
 
 main {
     grid-row: 2;
-    /*border: 1px solid black;*/
 
     display: grid;
     grid-template-rows: 2fr 1fr;
@@ -47,16 +45,15 @@ main {
     font-size: 40px;
 
     grid-row: 3;
-    border: 1px solid black;
 }
 
 
 .content1 {
     grid-row: 1;
-    /*border: 1px solid red;*/
 
     display: grid;
     grid-template-rows: 1fr 1fr;
+    /*grid-template-columns: 2fr 8fr 2fr;*/
 }
 
 .slider {
@@ -70,7 +67,6 @@ main {
 
 .content2 {
     grid-row: 2;
-    /*border: 1px solid red;*/
 }
 
 .in_content2 {
@@ -106,10 +102,20 @@ main {
     width: 600px;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    /*align-content: end;*/
+    justify-content: space-between;
 
     font-size: 40px;
     text-align: justify;
 }
+
+/*blockquote {*/
+/*    grid-row: 1;*/
+/*}*/
+
+/*blockquote + img {*/
+/*    grid-row: 2;*/
+/*}*/
 
 .video {
     width: 600px;
@@ -140,9 +146,9 @@ main {
 
 label::before {
     content: '';
-    display: inline-block;
     position: absolute;
-    top: 150px;
+    top: 50%;
+    transform: translateY(-50%);
 
     width: 60px;
     height: 60px;
@@ -152,28 +158,28 @@ label::before {
     border-radius: 50%;
 }
 
-label[for="prev"]::before {
+label[for="prev"]::before,
+label[for="prev"]::after {
     left: -120px;
 }
 
-label[for="next"]::before {
+label[for="next"]::before,
+label[for="next"]::after {
     right: -120px;
 }
 
 label[for="prev"]::after, label[for="next"]::after {
     content: url("prev.png");
     position: absolute;
-    top: 150px;
+    top: 50%;
 }
 
 label[for="prev"]::after {
-    left: -120px;
-    transform: translate(125%, 50%);
+    transform: translate(100%, -50%);
 }
 
 label[for="next"]::after {
-    right: -120px;
-    transform: translate(-125%, 50%) scaleX(-1);
+    transform: translate(-100%, -50%) scaleX(-1);
 }
 
 .video > span {
@@ -187,7 +193,7 @@ label[for="next"]::after {
 
 #play::before {
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     width: 100px;
     height: 100px;
 }
@@ -197,5 +203,35 @@ label[for="next"]::after {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translateX(-30%);
+    transform: translate(-30%, -50%);
 }
+
+label[for="prev"]:hover,
+label[for="next"]:hover,
+#play:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+input[type="button"] {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto 0;
+    height: 70px;
+    width: 250px;
+    font-size: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+
+    background: radial-gradient(#ffe348, #ffdb01);
+}
+
+#but1:hover, #but2 {
+    display: none;
+}
+
+#but1:hover + #but2 {
+    display: flex;
+    background: radial-gradient(#ffe868, #ffe130);
+}
+
